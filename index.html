@@ -54,12 +54,6 @@
             <p>School website built using HTML, JavaScript and CSS animations.</p>
         </div>
         </a>
-        <a href="#" id="openPopup4">
-        <div class="project-card">
-            <h3>Real Time Chat</h3>
-            <p>Chating website built using Python{Flask}, Html, JavaScript and CSS animations.</p>
-        </div>
-        </a>
         <a href="#" id="openPopup3">
         <div class="project-card">
             <h3>Social Media</h3>
@@ -195,26 +189,6 @@
 </script>
 
     
-<div id="popupOverlay" class="popup-overlay"></div>
-
-<div id="ca" class="popup"></div>
-    <iframe src="Chat Application/templates/index.html"></iframe> <!-- Replace with your desired URL -->
-</div>
-
-<script>
-    document.getElementById("openPopup4").addEventListener("click", function(event) {
-        event.preventDefault();
-        // Show popup and overlay
-        document.getElementById("ca").style.display = "block";
-        document.getElementById("popupOverlay").style.display = "block";
-
-        // Automatically close the popup after 30 seconds
-        setTimeout(function() {
-            document.getElementById("ca").style.display = "none";
-            document.getElementById("popupOverlay").style.display = "none";
-        }, 10000); // 30 seconds = 30000 milliseconds
-    });
-</script>
 
 </body>
 </html>
