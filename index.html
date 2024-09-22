@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Web Developer</title>
+    <title>Portfolio - Abhinav Aryan</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -42,25 +42,25 @@
 
     <section id="projects" class="section">
         <h2>Projects</h2>
-        <a href="Ecomerce\index.html">
+        <a href="#" id="openPopup">
         <div class="project-card">
             <h3>eCommerce</h3>
             <p>Responsive eCommerce website built using HTML, CSS, and JavaScript.</p>
         </div>
         </a>
-        <a href="School Site\index.html">
+        <a href="#" id="openPopup2">
         <div class="project-card">
            <h3>School Site</h3>
             <p>School website built using HTML, JavaScript and CSS animations.</p>
         </div>
         </a>
-        <a href="Chat Application\templates\index.html">
+        <a href="#" id="openPopup4">
         <div class="project-card">
             <h3>Real Time Chat</h3>
             <p>Chating website built using Python{Flask}, Html, JavaScript and CSS animations.</p>
         </div>
         </a>
-        <a href="Social Media\index.html">
+        <a href="#" id="openPopup3">
         <div class="project-card">
             <h3>Social Media</h3>
             <p>A Social Media site built using Python and HTML.</p>
@@ -91,3 +91,130 @@
 
 
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <style>
+        /* Style to make the popup mobile-friendly */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            z-index: 9999;
+            overflow: hidden;
+        }
+        .popup iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9998;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="popup" class="popup">
+    <iframe src="Ecomerce\index.html"></iframe> <!-- Replace with your desired URL -->
+</div>
+
+<script>
+    document.getElementById("openPopup").addEventListener("click", function(event) {
+        event.preventDefault();
+        // Show popup and overlay
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+
+        // Automatically close the popup after 30 seconds
+        setTimeout(function() {
+            document.getElementById("popup").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+        }, 10000); // 30 seconds = 30000 milliseconds
+    });
+</script>
+
+
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="sc" class="popup">
+    <iframe src="School Site\index.html"></iframe> <!-- Replace with your desired URL -->
+</div>
+
+<script>
+    document.getElementById("openPopup2").addEventListener("click", function(event) {
+        event.preventDefault();
+        // Show popup and overlay
+        document.getElementById("sc").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+
+        // Automatically close the popup after 30 seconds
+        setTimeout(function() {
+            document.getElementById("sc").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+        }, 10000); // 30 seconds = 30000 milliseconds
+    });
+</script>
+
+
+<div id="ss" class="popup">
+    <iframe src="Social Media\index.html"></iframe> <!-- Replace with your desired URL -->
+</div>
+
+<script>
+    document.getElementById("openPopup3").addEventListener("click", function(event) {
+        event.preventDefault();
+        // Show popup and overlay
+        document.getElementById("ss").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+
+        // Automatically close the popup after 30 seconds
+        setTimeout(function() {
+            document.getElementById("ss").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+        }, 10000); // 30 seconds = 30000 milliseconds
+    });
+</script>
+
+    
+<div id="popupOverlay" class="popup-overlay"></div>
+
+<div id="ca" class="popup"></div>
+    <iframe src="Chat Application/templates/index.html"></iframe> <!-- Replace with your desired URL -->
+</div>
+
+<script>
+    document.getElementById("openPopup4").addEventListener("click", function(event) {
+        event.preventDefault();
+        // Show popup and overlay
+        document.getElementById("ca").style.display = "block";
+        document.getElementById("popupOverlay").style.display = "block";
+
+        // Automatically close the popup after 30 seconds
+        setTimeout(function() {
+            document.getElementById("ca").style.display = "none";
+            document.getElementById("popupOverlay").style.display = "none";
+        }, 10000); // 30 seconds = 30000 milliseconds
+    });
+</script>
+
+</body>
+</html>
